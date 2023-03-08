@@ -2,7 +2,7 @@ import React from 'react';
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import './index.css';
-import {Route, Routes} from "react-router-dom";
+import {Link, Route, Routes} from "react-router-dom";
 import RouteList from "./app/router";
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -26,6 +26,12 @@ const App = () => {
                 }}
             >
                 <div className="logo" />
+
+                <ul>
+                    <li><Link to={'/'}>메인</Link></li>
+                    <li><Link to={'/login'}>로그인</Link></li>
+                </ul>
+
                 <Menu
                     theme="dark"
                     mode="inline"
