@@ -1,11 +1,12 @@
 import React from "react";
 import { DeleteOutlined } from '@ant-design/icons';
-import { Table ,Button, Tooltip, Typography, Row, Col, Select, Space} from 'antd';
+import { Table ,Button, Tooltip, Typography, Row, Col, Select, Space, Input} from 'antd';
 import { useState } from 'react';
 
 import '../assets/scss/pages/BoardList.scss';
 
 const { Title } = Typography;
+const { Search } = Input;
 
 const columns = [
     {
@@ -52,27 +53,12 @@ const data = [
 {key: '12', name: 'Disabled User',   age: 99,   address: 'Sydney No. 1 Lake Park',money:'$123,000'},
 ];
 
-// rowSelection object indicates the need for row selection
-const rowSelection = {
-    onChange: (selectedRowKeys, selectedRows) => {
-        console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-    },
-    getCheckboxProps: (record) => ({
-        disabled: record.name === 'Disabled User',
-        // Column configuration not to be checked
-        name: record.name,
-    }),
-};
-
-const handleChange = (value) => {
-  console.log(`selected ${value}`);
-};
 
 function BoardList(props) {
     const [selectionType, setSelectionType] = useState('checkbox');
     return (
       <div className="boardList">
-        <Row gutter={8} justify="space-between">
+        <Row gutter={8} justify="space-between" align="middle">
         <Col>
           <Title>Baord list</Title>
         </Col>
@@ -83,7 +69,6 @@ function BoardList(props) {
               style={{
                 width: 120,
               }}
-              onChange={handleChange}
               options={[
                 {
                   value: 'jack',
@@ -104,18 +89,11 @@ function BoardList(props) {
                 },
               ]}
             />
-            <Select
-              defaultValue="lucy"
+            <Search
+              placeholder="input search text"
               style={{
-                width: 120,
+                width: 200,
               }}
-              disabled
-              options={[
-                {
-                  value: 'lucy',
-                  label: 'Lucy',
-                },
-              ]}
             />
           </Space>
         </Col>
@@ -123,10 +101,6 @@ function BoardList(props) {
 
         <Table
           bordered
-          rowSelection={{
-            type: selectionType,
-            ...rowSelection,
-          }}
           columns={columns}
           dataSource={data}
            

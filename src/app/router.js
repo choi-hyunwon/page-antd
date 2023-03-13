@@ -12,8 +12,8 @@ const RouteList = [
     {path : '/cardList',   element :  <CardList/>},
     {path : '/Table',   element :  <Table/>},
     {path : '/BoardList',   element :  <BoardList/>},
-    {path : '/BoardWrite',   element :  <BoardWrite/>},
     {path : '/BoardView',   element :  <BoardView/>},
+    {path : '/BoardWrite',   element :  <BoardWrite/>},
 
 ]
 

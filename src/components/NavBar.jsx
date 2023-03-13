@@ -12,8 +12,8 @@ const items = [
     {name : "cardList", path : "/cardList", icon: <HomeOutlined/>},
     {name : "table", path : "/table", icon : <HomeOutlined/>},
     {name : "boardList", path : "/boardList", icon : <HomeOutlined/>},
-    {name : "boardWrite", path : "/boardWrite", icon : <HomeOutlined/>},
     {name : "boardView", path : "/boardView", icon : <HomeOutlined/>},
+    {name : "boardWrite", path : "/boardWrite", icon : <HomeOutlined/>},
 ]
 items.forEach((item, index)=>{
     menuItems.push({

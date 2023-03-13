@@ -4,6 +4,8 @@ import { Avatar, Badge, Space , Button, Tooltip} from 'antd';
 
 // const { Title, Paragraph } = Typography;
 
+import '../assets/scss/components/Header.scss';
+
 function Header(props) {
     return (
         <div id="header">
