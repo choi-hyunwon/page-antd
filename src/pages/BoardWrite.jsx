@@ -11,6 +11,12 @@ function BoardWrite(props) {
         <div className="boardWrite">
             <Title>BoardWrite</Title>
             <p> 추가 삭재 </p>
+            <p> 추가 삭재 </p>
+            <p> 추가 삭재 </p>
+            <p> 추가 삭재 </p>
+
+
+
         </div>
     );
 }
