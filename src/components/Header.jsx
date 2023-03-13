@@ -1,8 +1,6 @@
 import React from 'react';
-import { UserOutlined , LogoutOutlined} from '@ant-design/icons';
-import { Avatar, Badge, Space , Button, Tooltip} from 'antd';
-
-// const { Title, Paragraph } = Typography;
+import { UserOutlined} from '@ant-design/icons';
+import { Avatar, Badge, Space , Button, Input} from 'antd';
 
 import '../assets/scss/components/Header.scss';
 
@@ -15,7 +13,10 @@ function Header(props) {
                 <Avatar icon={<UserOutlined />} />
                 </Badge>
                 홍길동님 안녕하세요.
-                <Tooltip title="Logout"><Button icon={<LogoutOutlined />} href="" /></Tooltip>
+                <Input.Group compact>
+                    <Button size="small">개인정보수정</Button>
+                    <Button size='small' href="">로그아웃</Button>
+                </Input.Group>
             </Space>
         </div>
     );

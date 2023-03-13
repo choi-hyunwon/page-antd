@@ -1,5 +1,5 @@
 import React from "react";
-import { Descriptions , Badge, Typography} from 'antd';
+import {Descriptions, Badge, Typography, Space, Button} from 'antd';
 
 import '../assets/scss/pages/BoardView.scss';
 
@@ -38,6 +38,9 @@ function BoardView(props) {
                     <br />
                 </Descriptions.Item>
             </Descriptions>
+            <Space className="btnWrap">
+                <Button size="large">목록</Button>
+            </Space>
         </div>
     );
 }

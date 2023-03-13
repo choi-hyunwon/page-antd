@@ -8,4 +8,10 @@
     .ant-table-bordered{
         @extend .boardComm;
     }
+    >:not(:first-child){
+        margin-top:8px;
+    }
+    .ant-table-thead .ant-table-cell{ 
+        text-align: center;
+    }
 }

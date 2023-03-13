@@ -9,7 +9,7 @@ const { Title, Text } = Typography;
 function Login() {
     return (
         <div className="login">
-        <Card style={{ width: 600 }}>
+        <Card>
             <Title><UserOutlined /> Login</Title>
             <Alert
                 message="초기 로그인 정보는 관리자에게 문의하세요."

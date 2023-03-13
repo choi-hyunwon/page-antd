@@ -1,31 +1,50 @@
-
 import React from 'react';
-import { HomeOutlined, UserOutlined} from '@ant-design/icons';
+import {
+    AppstoreOutlined,
+    DesktopOutlined,
+    UnorderedListOutlined,
+    TableOutlined,
+    SmileOutlined,
+    HomeOutlined
+} from '@ant-design/icons';
 import { Menu } from 'antd';
+import {useNavigate} from "react-router-dom";
 
-import {Link} from "react-router-dom";
+function getItem(label, key, icon, children, type) {
+    return {
+        key,
+        icon,
+        children,
+        label,
+        type,
+    };
+}
 
-const menuItems = [];
-const items = [
-    {name : "Home", path : "/", icon : <HomeOutlined/>},
-    {name : "login", path : "/login", icon : <UserOutlined/>},
-    {name : "cardList", path : "/cardList", icon: <HomeOutlined/>},
-    {name : "table", path : "/table", icon : <HomeOutlined/>},
-    {name : "boardList", path : "/boardList", icon : <HomeOutlined/>},
-    {name : "boardView", path : "/boardView", icon : <HomeOutlined/>},
-    {name : "boardWrite", path : "/boardWrite", icon : <HomeOutlined/>},
-]
-items.forEach((item, index)=>{
-    menuItems.push({
-        label : <Link to={item.path}>{item.name}</Link>,
-        key : index,
-        icon : item.icon
-    })
-})
-  
+// name , path , icon
+const menuItems = [
+    getItem('첫페이지', '/', <HomeOutlined />),
+    getItem('로그인', '/Login', <DesktopOutlined />),
+    getItem('회원가입', '/Join', <DesktopOutlined />),
+    getItem('table', '/Table', <TableOutlined />),
+    getItem('cardList', '/CardList', <AppstoreOutlined />),
+    getItem('board', 'sub1', <UnorderedListOutlined />, [
+        getItem('boardList', '/BoardList'),
+        getItem('boardView', '/BoardView'),
+        getItem('boardWrite', '/BoardWrite'),
+    ]),
+    getItem('Navigation long text Test', 'sub2', <SmileOutlined />, [
+        getItem('Option 9', '8'),
+        getItem('Option 10', '9'),
+        getItem('2Depth', '10', null,
+            [getItem('3depth menu', '11'), getItem('3depth menu', '12')]
+        ),
+    ]),
+];
+
 function NavBar() {
+    const navigate = useNavigate();
     return (
-            <Menu theme="dark" defaultSelectedKeys={['0']} mode="inline" items={menuItems}/>      
+            <Menu onClick={(e)=>navigate(e.key)} theme="dark" defaultSelectedKeys={['0']} mode="inline" items={menuItems}/>
     );
 }
 

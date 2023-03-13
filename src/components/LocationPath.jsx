@@ -32,27 +32,26 @@ const menuItems = [
 
 function LocationPath(props) {
     return (
-        <div className='LocationPath'>
-              <Breadcrumb
-    items={[
-      {
-        title: 'Ant Design',
-      },
-      {
-        title: <a href="">Component</a>,
-      },
-      {
-        title: <a href="">General</a>,
-        menu: {
-          items: menuItems,
-        },
-      },
-      {
-        title: 'Button',
-      },
-    ]}
-  />
-        </div>
+      <Breadcrumb
+        className='LocationPath'
+        items={[
+          {
+            title: 'Ant Design',
+          },
+          {
+            title: <a href="">Component</a>,
+          },
+          {
+            title: <a href="">General</a>,
+            menu: {
+              items: menuItems,
+            },
+          },
+          {
+            title: 'Button',
+          },
+        ]}
+      />
     );
 }
 
