@@ -11,14 +11,9 @@ const RouteList = [
     {path : '/login',   element :  <Login/>},
     {path : '/cardList',   element :  <CardList/>},
     {path : '/Table',   element :  <Table/>},
-    // {path : '/board',   element :  <Board/>,
-    //     children: [
-    //         {path : '/write',   element :  <BoardWrite/>},
-    //     ],
-    // },
     {path : '/BoardList',   element :  <BoardList/>},
-    // {path : '/BoardWrite',   element :  <BoardWrite/>},
-    // {path : '/BoardView',   element :  <BoardView/>},
+    {path : '/BoardView',   element :  <BoardView/>},
+    {path : '/BoardWrite',   element :  <BoardWrite/>},
 
 ]
 
