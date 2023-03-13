@@ -9,6 +9,7 @@ function Table(props) {
     return (
         <div>
             <Title>table</Title>
+            <section>
             <Descriptions title="Descriptions table" bordered={true}>
                 <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>
                 <Descriptions.Item label="Billing Mode">Prepaid</Descriptions.Item>
@@ -38,9 +39,10 @@ function Table(props) {
                 <br />
                 </Descriptions.Item>
             </Descriptions>
+            </section>
 
             <section>
-                <Descriptions title="in card"  layout="vertical" size='small' column={{ xxl: 3, xl: 3, lg: 2, md: 2, sm: 2, xs: 1 }}>
+                <Descriptions title="Table in card"  layout="vertical" size='small' column={{ xxl: 3, xl: 3, lg: 2, md: 2, sm: 2, xs: 1 }}>
                     <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>
                     <Descriptions.Item label="Telephone">1810000000</Descriptions.Item>
                     <Descriptions.Item label="Live">Hangzhou, Zhejiang</Descriptions.Item>

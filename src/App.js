@@ -3,7 +3,6 @@ import {Layout, FloatButton} from 'antd';
 import {Route, Routes} from "react-router-dom";
 import RouteList from "./app/router";
 
-// import variables from './assets/scss/variables.scss';
 import './assets/scss/Ui.scss';
 
 // components
