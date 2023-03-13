@@ -14,7 +14,9 @@ function BoardWrite(props) {
             <p> 추가 삭재 </p>
             <p> 추가 삭재 </p>
             <p> 추가 삭재 </p>
-
+            <p> 추가 삭재 </p>
+            <p> 추가 삭재 </p>
+            <p> 추가 삭재333 </p>
 
 
         </div>
