@@ -1,5 +1,4 @@
 import React from "react";
-import { EditOutlined, EllipsisOutlined, SettingOutlined ,MoreOutlined} from '@ant-design/icons';
 import { Descriptions , Badge, Typography} from 'antd';
 
 import '../assets/scss/pages/BoardView.scss';

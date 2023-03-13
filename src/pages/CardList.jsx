@@ -38,7 +38,7 @@ function cardList() {
                     title="2col Card title"
                     extra={<a href="#"><MoreOutlined /></a>}
                 >
-                    <Descriptions title="User Info"  size='small' bordered column={{ xxl: 2, xl: 2, lg: 2, md: 2, sm: 2, xs: 1 }}>
+                    <Descriptions title="User Info"  size='small' bordered column={{ xxl: 2, xl: 2, lg: 2, md: 1, sm: 1, xs: 1 }}>
                         <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>
                         <Descriptions.Item label="Telephone">1810000000</Descriptions.Item>
                         <Descriptions.Item label="Live">Hangzhou, Zhejiang</Descriptions.Item>
@@ -53,19 +53,12 @@ function cardList() {
                     title="3col Card title"
                     extra={<a href="#"><MoreOutlined /></a>}
                 >
-                      <Row gutter={8}>
-                        <Col span={12}>
+                    <Space size="large" className="block">
                         <Statistic title="Active Users" value={112893} />
-                        </Col>
-                        <Col span={12}>
                         <Statistic title="Account Balance (CNY)" value={112893} precision={2} />
-                        </Col>
-                        <Divider />
-                        <Col span={24}>
-                            <Text strong>5/15</Text>
-                            <Progress percent={30} status="active" strokeColor={{ from: '#108ee9', to: '#87d068' }} />
-                        </Col>
-                    </Row>
+                    </Space>
+                    <Text strong>5/15</Text>
+                    <Progress percent={30} status="active" strokeColor={{ from: '#108ee9', to: '#87d068' }} />
                 </Card>
             </Col>
             <Col span={8}>
@@ -73,22 +66,19 @@ function cardList() {
                     title="3col Card title"
                     extra={<a href="#"><MoreOutlined /></a>}
                 >
-                    <Row gutter={8}>
-                    <Col span={12}>
+                    <Space>
                         <Result
                             status="success"
                             title="Done"
                             subTitle="2021.12.17"
                         />
-                    </Col>
-                    <Col span={12}>
                         <Result
                             icon={<SmileOutlined />}
                             title="Good"
                             subTitle="2021.12.17"
                         />
-                    </Col>
-                    </Row>
+                    </Space>
+                    
                 </Card>
             </Col>
             <Col span={8}>

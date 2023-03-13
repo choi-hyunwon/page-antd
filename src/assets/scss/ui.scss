@@ -1,4 +1,5 @@
 @import url(Reset.scss);
+@import url(Variables.scss);
 
 @font-face {
     font-family: 'Pretendard';
@@ -55,9 +56,11 @@
     font-display: swap;
 }
 
-// :where(.css-dev-only-do-not-override-1me4733)[class^="ant-layout"], :where(.css-dev-only-do-not-override-1me4733)[class*=" ant-layout"]{
+/////////////////////////////////////////////////////////////////////////////////////////////
+///             ant.d override
+/////////////////////////////////////////////////////////////////////////////////////////////
 [class^="ant-layout"] *,[class*=" ant-layout"] *{
-    font-family: 'Pretendard', sans-serif !important;
+    font-family: 'Pretendard', 'Malgun Gothic', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .ant-layout{
@@ -68,7 +71,14 @@
         min-height:calc(100vh - 64px)
     }
 }
+.ant-space.block{
+    display: flex;
+}
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+///             common
+/////////////////////////////////////////////////////////////////////////////////////////////
 .logo{
     content: '';
     display: inline-block;
@@ -78,9 +88,3 @@
     margin:50px auto 24px;
 }
 
-#header{
-    padding:16px 32px;
-    text-align: right;
-    background-color: white;
-    box-shadow: -8px -6px 30px 6px rgba(0,0,0,0.03);
-}

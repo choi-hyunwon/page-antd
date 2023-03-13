@@ -1,21 +1,25 @@
 import React from "react";
 import { UserOutlined } from '@ant-design/icons';
-import { Card , Button, Checkbox, Form, Input , Typography, Divider} from 'antd';
+import { Card , Button, Checkbox, Form, Input , Typography, Divider, Alert} from 'antd';
 
 import '../assets/scss/pages/Login.scss';
 
-const { Title, Paragraph } = Typography;
+const { Title, Text } = Typography;
 
 function Login() {
     return (
         <div className="login">
         <Card style={{ width: 600 }}>
             <Title><UserOutlined /> Login</Title>
-            <Paragraph>domfam ant.D sample login</Paragraph>
+            <Alert
+                message="초기 로그인 정보는 관리자에게 문의하세요."
+                type="warning"
+                showIcon
+            />
             <Form
                 name="basic"
                 style={{
-                maxWidth: 600,
+                // maxWidth: 600,
                 }}
                 initialValues={{
                 remember: true,
@@ -24,7 +28,7 @@ function Login() {
                 layout="vertical"
             >
                 <Form.Item
-                label="Username"
+                label="사번"
                 name="username"
                 rules={[
                     {
@@ -36,7 +40,7 @@ function Login() {
                 </Form.Item>
 
                 <Form.Item
-                label="Password"
+                label="비밀번호"
                 name="password"
                 rules={[
                     {
@@ -56,8 +60,8 @@ function Login() {
 
                 <Form.Item
                 >
-                <Button type="primary" htmlType="submit" block>
-                    Submit
+                <Button type="primary" htmlType="submit"  size="large" block>
+                    로그인
                 </Button>
                 </Form.Item>
 
@@ -66,57 +70,7 @@ function Login() {
                 </Divider>
 
             </Form>
-            {/* <Form
-            name="normal_login"
-            className="login-form"
-            initialValues={{
-                remember: true,
-            }}
-            onFinish={onFinish}
-            >
-            <Form.Item
-                name="username"
-                rules={[
-                {
-                    required: true,
-                    message: 'Please input your Username!',
-                },
-                ]}
-            >
-                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
-            </Form.Item>
-            <Form.Item
-                name="password"
-                rules={[
-                {
-                    required: true,
-                    message: 'Please input your Password!',
-                },
-                ]}
-            >
-                <Input
-                prefix={<LockOutlined className="site-form-item-icon" />}
-                type="password"
-                placeholder="Password"
-                />
-            </Form.Item>
-            <Form.Item>
-                <Form.Item name="remember" valuePropName="checked" noStyle>
-                <Checkbox>Remember me</Checkbox>
-                </Form.Item>
-        
-                <a className="login-form-forgot" href="">
-                Forgot password
-                </a>
-            </Form.Item>
-        
-            <Form.Item>
-                <Button type="primary" htmlType="submit" className="login-form-button">
-                Log in
-                </Button>
-                Or <a href="">register now!</a>
-            </Form.Item>
-            </Form> */}
+            
         </Card>
         </div>
       );

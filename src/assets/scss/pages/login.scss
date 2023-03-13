@@ -3,4 +3,11 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+
+    .ant-form-item .ant-form-item-label >label{
+        font-size: 16px;
+    }
+    .ant-alert {
+        margin-bottom:32px;
+    }
 }

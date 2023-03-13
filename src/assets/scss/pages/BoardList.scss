@@ -1,0 +1,11 @@
+.boardComm{
+    // border-top:1px solid #001529;
+    border-bottom:1px solid #ddd;
+}
+
+
+.boardList{
+    .ant-table-bordered{
+        @extend .boardComm;
+    }
+}
