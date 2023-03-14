@@ -1,0 +1,20 @@
+.login{
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // height: 100%;
+    .ant-card{
+        width:50vw;
+        min-width: 300px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ant-form-item .ant-form-item-label >label{
+        font-size: 16px;
+    }
+    .ant-alert {
+        margin-bottom:32px;
+    }
+}

@@ -88,13 +88,14 @@ h1.ant-typography{ text-align: center;}
 ///             common
 /////////////////////////////////////////////////////////////////////////////////////////////
 .logo{
-    content: '';
+    margin:0 auto;
     display: inline-block;
-    width:180px;
-    height: 180px;
-    border-radius: 50%;
-    background: #fff url(../images/logo-dark.svg) center center no-repeat;
-    margin:16px auto 32px;
+    content: '';
+    width:196px;
+    height:30px;
+    background-image: url("../images/logo-dark.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 main section{

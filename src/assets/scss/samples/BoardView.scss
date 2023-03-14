@@ -1,0 +1,11 @@
+.boardView{
+    .ant-descriptions-view{
+        background-color: #fff;
+    }
+    //추후 mixin으로 변경예정
+    .btnWrap{
+        display: flex;
+        justify-content: center;
+        margin:32px auto;
+    }
+}

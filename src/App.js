@@ -18,17 +18,17 @@ const App  = () => {
             <Layout>
                 <Header />
                 <Layout>
-                    {/*<Sider*/}
-                    {/*    breakpoint="lg"*/}
-                    {/*    collapsedWidth="0"*/}
-                    {/*    onBreakpoint={(broken) => {*/}
-                    {/*        console.log(broken);*/}
-                    {/*    }}*/}
-                    {/*    onCollapse={(collapsed, type) => {*/}
-                    {/*        console.log(collapsed, type);*/}
-                    {/*    }}>*/}
-                    {/*    <NavBar/>*/}
-                    {/*</Sider>*/}
+                    <Sider
+                        breakpoint="lg"
+                        collapsedWidth="0"
+                        onBreakpoint={(broken) => {
+                            console.log(broken);
+                        }}
+                        onCollapse={(collapsed, type) => {
+                            console.log(collapsed, type);
+                        }}>
+                        <NavBar/>
+                    </Sider>
                     <Layout>
                         <LocationPath />
 

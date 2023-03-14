@@ -1,0 +1,18 @@
+#header{
+    //padding: 16px 32px;
+    background-color: white;
+    box-shadow: -8px -6px 30px 6px rgba(0,0,0,0.03);
+
+    .loginInfo{
+        //position: absolute;
+        //right:24px;
+        //top:30px;
+        display: flex;
+        justify-content: space-between;
+        padding:24px;
+        //flex-direction: row-reverse;
+        //margin-bottom:24px;
+        //padding-right:32px;
+    }
+}
+

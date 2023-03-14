@@ -1,0 +1,17 @@
+.boardComm{
+    // border-top:1px solid #001529;
+    border-bottom:1px solid #ddd;
+}
+
+
+.boardList{
+    .ant-table-bordered{
+        @extend .boardComm;
+    }
+    >:not(:first-child){
+        margin-top:8px;
+    }
+    .ant-table-thead .ant-table-cell{ 
+        text-align: center;
+    }
+}
