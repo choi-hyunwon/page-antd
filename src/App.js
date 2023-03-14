@@ -3,13 +3,12 @@ import {Layout, FloatButton} from 'antd';
 import {Route, Routes} from "react-router-dom";
 import RouteList from "./app/router";
 
-// import variables from './assets/scss/variables.scss';
 import './assets/scss/Ui.scss';
 
-// components
-import Header from "./components/Header";
-import LocationPath from "./components/LocationPath";
-import NavBar from "./components/NavBar";
+// layout
+import Header from "./layout/Header";
+import LocationPath from "./layout/LocationPath";
+import NavBar from "./layout/NavBar";
 
 const {Footer, Sider} = Layout;
 

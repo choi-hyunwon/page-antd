@@ -1,3 +1,8 @@
 .LocationPath{
     padding:16px 32px;
+    &.ant-breadcrumb{
+        > ol{
+            flex-direction: row-reverse;
+        }
+    }
 }

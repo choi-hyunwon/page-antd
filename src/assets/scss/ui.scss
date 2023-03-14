@@ -68,13 +68,21 @@
     min-height: 100vh;
     main{
         padding:32px;
-        min-height:calc(100vh - 64px)
+        min-height:calc(100vh - 180px)
     }
 }
 .ant-space.block{
     display: flex;
 }
 
+h1.ant-typography{ text-align: center;}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+///             ant.d color
+/////////////////////////////////////////////////////////////////////////////////////////////
+.ant-segmented{
+    background-color:  #d9d9d9;
+}
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 ///             common
@@ -82,9 +90,20 @@
 .logo{
     content: '';
     display: inline-block;
-    width:100%;
-    height: 20px;
-    background: url(../images/logo-light.svg) center center no-repeat;
-    margin:50px auto 24px;
+    width:180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #fff url(../images/logo-dark.svg) center center no-repeat;
+    margin:16px auto 32px;
+}
+
+main section{
+    margin:32px 0 64px;
+}
+
+.btnWrap{
+    display: flex;
+    justify-content: center;
+    margin:16px auto;
 }
 
