@@ -15,37 +15,38 @@ const {Footer, Sider} = Layout;
 const App  = () => {
 
     return (
-        <Layout>
-            <Sider
-                breakpoint="lg"
-                collapsedWidth="0"
-                onBreakpoint={(broken) => {
-                console.log(broken);
-            }}
-                onCollapse={(collapsed, type) => {
-                console.log(collapsed, type);
-            }}>
-                <div className="logo"/>
-                <NavBar/>
-            </Sider>
             <Layout>
                 <Header />
-                <LocationPath />
+                <Layout>
+                    {/*<Sider*/}
+                    {/*    breakpoint="lg"*/}
+                    {/*    collapsedWidth="0"*/}
+                    {/*    onBreakpoint={(broken) => {*/}
+                    {/*        console.log(broken);*/}
+                    {/*    }}*/}
+                    {/*    onCollapse={(collapsed, type) => {*/}
+                    {/*        console.log(collapsed, type);*/}
+                    {/*    }}>*/}
+                    {/*    <NavBar/>*/}
+                    {/*</Sider>*/}
+                    <Layout>
+                        <LocationPath />
 
-                <main >
-                    <Routes>
-                        {RouteList.map((item, index) => (<Route key={index} {...item}/>))
-}
-                    </Routes>
-                </main>
-                <Footer style={{
-                    textAlign: 'center'
-                }}>
-                    Domfam AntD page sample ©2023 Created by Ant UED
-                </Footer>
+                        <main >
+                            <Routes>
+                                {RouteList.map((item, index) => (<Route key={index} {...item}/>))
+        }
+                            </Routes>
+                        </main>
+                        <Footer style={{
+                            textAlign: 'center'
+                        }}>
+                            Domfam AntD page sample ©2023 Created by Ant UED
+                        </Footer>
+                    </Layout>
+                </Layout>
                 <FloatButton.BackTop/>
-            </Layout>`
-        </Layout>
+            </Layout>
     );
 };
 
